@@ -45,7 +45,7 @@ export function ForgeAI() {
   }
 
   return (
-    <div className="fixed right-4 bottom-20 z-50 sm:right-6 lg:bottom-6">
+    <div className="fixed right-2 bottom-[5.5rem] z-50 sm:right-6 lg:right-4 lg:bottom-6">
       <AnimatePresence>
         {open && (
           <motion.section
@@ -53,10 +53,10 @@ export function ForgeAI() {
             animate={{ opacity: 1, y: 0, scale: 1 }}
             exit={{ opacity: 0, y: 12, scale: 0.98 }}
             transition={{ duration: 0.28 }}
-            className="mb-3 flex h-[min(560px,70dvh)] w-[min(380px,calc(100vw-2rem))] flex-col border border-line bg-charcoal shadow-[0_24px_80px_rgba(0,0,0,0.45)]"
+            className="mb-3 flex h-[min(560px,calc(100dvh-9rem))] w-[calc(100vw-1rem)] max-w-[380px] min-h-0 flex-col border border-line bg-charcoal shadow-[0_24px_80px_rgba(0,0,0,0.45)]"
             aria-label="Vivansh AI assistant"
           >
-            <header className="flex items-center justify-between border-b border-line px-4 py-3">
+            <header className="flex shrink-0 items-center justify-between border-b border-line px-4 py-3">
               <div>
                 <p className="text-[10px] font-semibold tracking-[0.28em] text-ember uppercase">
                   AI assistant
@@ -73,7 +73,7 @@ export function ForgeAI() {
               </button>
             </header>
 
-            <div className="flex-1 space-y-3 overflow-y-auto px-4 py-4">
+            <div className="min-h-0 flex-1 space-y-3 overflow-y-auto px-4 py-4">
               {messages.map((msg) => (
                 <div
                   key={msg.id}
@@ -106,7 +106,7 @@ export function ForgeAI() {
             </div>
 
             <form
-              className="border-t border-line p-3"
+              className="shrink-0 border-t border-line p-3"
               onSubmit={(e) => {
                 e.preventDefault()
                 send(input)

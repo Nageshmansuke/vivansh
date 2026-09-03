@@ -38,7 +38,7 @@ export function Navbar() {
           : 'border-transparent bg-ink/40 py-4 backdrop-blur-sm',
       )}
     >
-      <div className="relative z-[60] mx-auto flex max-w-[1440px] items-center justify-between px-5 sm:px-8 lg:px-12">
+      <div className="relative z-[120] mx-auto flex max-w-[1440px] items-center justify-between px-5 sm:px-8 lg:px-12">
         <Logo compact={scrolled} />
 
         <nav className="hidden items-center gap-5 xl:flex" aria-label="Primary">
@@ -82,7 +82,7 @@ export function Navbar() {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
-            className="fixed inset-0 top-0 z-40 bg-ink xl:hidden"
+            className="fixed inset-0 z-[100] h-dvh overflow-y-auto bg-ink xl:hidden"
           >
             <div className="flex h-full flex-col px-6 pt-24 pb-10">
               <nav className="flex flex-1 flex-col gap-2" aria-label="Mobile">
